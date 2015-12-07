@@ -1,3 +1,5 @@
 echo "Requesting VIN"
-curl -s 'http://randomvin.com/getvin.php?type=real' | pbcopy
+vin=$(curl -s 'http://randomvin.com/getvin.php?type=real')
+echo "Your VIN is: $vin"
+printf "$vin" | pbcopy
 echo "Copied VIN"
